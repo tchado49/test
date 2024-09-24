@@ -715,16 +715,16 @@ function fetchRow(urlimage,imgname,nextline){
 	//const Response = await fetch(urlimage);
 			//const fileblob = await Response.blob(); 
 			// alert("getrow : " + urlimage);
-			if(urlimage == 'frites1') {
+			if(imgname == 'frites1') {
 				array[0] = urlimage; arrayprod[0] = imgname;
 			}else{
-				if(urlimage == 'biriyani1') {
+				if(imgname == 'biriyani1') {
 					array[1] = urlimage; arrayprod[1] = imgname;
 				}else{
-					if(urlimage == 'hamburger1') {
+					if(imgname == 'hamburger1') {
 						array[2] = urlimage; arrayprod[2] = imgname;
 					}else{
-						if(urlimage == 'pizza1') {
+						if(imgname == 'pizza1') {
 							array[3] = urlimage; arrayprod[3] = imgname;
 						}else{
 							array[nextline] = urlimage; //array[nextline] = fileblob; 
@@ -751,8 +751,8 @@ async function getRow(){
             		.then(res => res.json())
             		.then(data => {
 				
-				array02[nextline] = data.name; //array02[nextline] = "Produit" + nextline; 
-				array0[nextline] = data.url; //alert("url : " + fileblob);
+				//array02[nextline] = data.name; //array02[nextline] = "Produit" + nextline; 
+				//array0[nextline] = data.url; //alert("url : " + fileblob);
 				
 				//const fileblob = data.blob();
 				//fetchRow(array0[nextline],array02[nextline],nextline); nextline = nextline + 1;
