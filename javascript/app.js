@@ -633,16 +633,7 @@ searchInput.addEventListener('input', () => {
          }
       });
 
-function displayprod() {
-
-	//let searchInput = document.getElementById('search-input');
-      //let searchResults = document.getElementById('search-results');
-
-      //let searchInput = document.querySelector('.titleprod');
-      //let searchResults = document.querySelector('.ulprod');
-      // define your search data as an array of strings
-      //let searchData = [
-         //'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Goa', 'Gujarat', 'Haryana'];
+function displayprod() {	
 
 	for(let i = 0; i<countrows; i++){
 		searchData[i] = arrayprod[i];
@@ -723,8 +714,25 @@ async function fetchBlob()
 function fetchRow(urlimage,imgname,nextline){
 	//const Response = await fetch(urlimage);
 			//const fileblob = await Response.blob(); 
-			array[nextline] = urlimage; //array[nextline] = fileblob; 
-			arrayprod[nextline] = imgname; alert("getrow : " + urlimage);
+			// alert("getrow : " + urlimage);
+			if(urlimage == 'frites1') {
+				array[0] = urlimage; arrayprod[0] = imgname;
+			}else{
+				if(urlimage == 'biriyani1') {
+					array[1] = urlimage; arrayprod[1] = imgname;
+				}else{
+					if(urlimage == 'hamburger1') {
+						array[2] = urlimage; arrayprod[2] = imgname;
+					}else{
+						if(urlimage == 'pizza1') {
+							array[3] = urlimage; arrayprod[3] = imgname;
+						}else{
+							array[nextline] = urlimage; //array[nextline] = fileblob; 
+							arrayprod[nextline] = imgname; nextline = nextline + 1;
+						}
+					}
+				}
+			}			
 			displayprod();
 			if(nextline >= countrows-1){
 				 startpage.close(); //alert("getrow end : " + imgname);
@@ -746,17 +754,10 @@ async function getRow(){
 				array02[nextline] = data.name; //array02[nextline] = "Produit" + nextline; 
 				array0[nextline] = data.url; //alert("url : " + fileblob);
 				
-				//let fr = new FileReader(); let img2 = document.getElementById('output');
-				//fr.addEventListener('loadend',()=> {
-					//let res = fr.result; alert('res blob : ' + res);
-					//img2.src ="data:image/png;base64,aHR0cHM6Ly90Y2hhZG80OTUuZ2l0aHViLmlvL3Rlc3R3ZWJzb2NrZXQvaW1nMy5wbmc=";
-				//});
-				//alert('data : ' + data);
-				//fr.readAsDataURL(data);
-				
 				//const fileblob = data.blob();
-				fetchRow(array0[nextline],array02[nextline],nextline); nextline = nextline + 1;
-                		//document.querySelector("table").innerHTML = tr;
+				//fetchRow(array0[nextline],array02[nextline],nextline); nextline = nextline + 1;
+				fetchRow(data.url,data.name,nextline);
+                		
             		});
 		idrow = idrow + 1;
 	}
