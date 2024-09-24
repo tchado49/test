@@ -714,7 +714,7 @@ async function fetchBlob()
 function fetchRow(urlimage,imgname,nextline){
 	//const Response = await fetch(urlimage);
 			//const fileblob = await Response.blob(); 
-			// alert("getrow : " + urlimage);
+			 alert("getrow : " + imgname);
 			if(imgname == 'frites1') {
 				array[0] = urlimage; arrayprod[0] = imgname;
 			}else{
@@ -734,7 +734,7 @@ function fetchRow(urlimage,imgname,nextline){
 				}
 			}			
 			displayprod();
-			if(nextline >= countrows-1){
+			if(nextline >= countrows-4){
 				 startpage.close(); //alert("getrow end : " + imgname);
 			}
 }
