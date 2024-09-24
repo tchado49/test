@@ -27,7 +27,7 @@ const arrayoutputnext = new Array(100); const arrayoutput = new Array(100); cons
 const arrayoutputnext2 = new Array(100); let varpair = 2;
 let valnext = 1; let countrows = 0; let preview = window.innerWidth; let test = 0; let a1 = 3; let a2 = 3; let valoutput = 0; 
 let a4= 3; let outp1= 1; let outp2= 5; let plus= 0; let min = 3; let active = false;
-let selectimage = 0; var urlimage = "";
+let selectimage = 0; var urlimage = ""; let nextline= 4;
 const aritem=['item2','item3','item4','item1'];
 
 //thumbnail.appendChild(thumbnailItems[0]);**
@@ -741,7 +741,7 @@ function fetchRow(urlimage,imgname,nextline){
 
 async function getRow(){
 
-	 let nextline= 4; let idrow = 2; //alert("Number_tr2 : " + countrows.toString());
+	 let idrow = 2; //alert("Number_tr2 : " + countrows.toString());
 
 	//var url = 'https://learned-midnight-zydeco.glitch.me/';
 	var url = 'https://script.google.com/macros/s/AKfycbzRp_0_O6e4zWQPIIWGpG3AWfHGR37IKLNtbuRhaOyVhsQM90ekh9ix8eFpy-7bp1i6/exec';
