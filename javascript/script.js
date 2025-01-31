@@ -240,8 +240,10 @@ function sortTable(column, sort_asc) {
 
 // 3. Converting HTML table to PDF
 
+//const pdf_btn = document.querySelector('#toPDF'); ********************
+//const customers_table = document.querySelector('#customers_table'); ********************
 const pdf_btn = document.querySelector('#toPDF');
-const customers_table = document.querySelector('#customers_table');
+const customers_table = document.getElementById('customers_table');
 
 
 const toPDF = function (customers_table) {
